@@ -10,7 +10,7 @@ function App() {
 
 function handleSubmit(e) {
     e.preventDefault()
-    console.log()
+    console.log(nameValue, ageValue, messageValue)
 }
     return (
 
@@ -36,6 +36,8 @@ function handleSubmit(e) {
                             name="user age"
                             min="18"
                             max="100"
+                            value={ageValue}
+                            onChange={(e)=> setAgeValue(e.target.value)}
                         />
                     </label>
                     <label htmlFor="message">
@@ -44,6 +46,8 @@ function handleSubmit(e) {
                             type="textarea"
                             id="user message"
                             name="user message"
+                            value={messageValue}
+                            onChange={(e)=> setMessageValue(e.target.value)}
                         />
                     </label>
 
