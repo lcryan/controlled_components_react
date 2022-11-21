@@ -6,6 +6,7 @@ function App() {
     const[nameValue, setNameValue] = React.useState('');
     const[ageValue, setAgeValue] = React.useState('');
     const[messageValue, setMessageValue] = React.useState('');
+    const[checkBoxValue, setCheckBoxValue] = React.useState(false);
 
 
 function handleSubmit(e) {
@@ -56,6 +57,8 @@ function handleSubmit(e) {
                         <input type="checkbox"
                                id="subscribe box"
                                name="subscribe box"
+                               checked={checkBoxValue}
+                               onClick={(event) => setCheckBoxValue (!checkBoxValue)}
                         />
                     </label>
                         <button type="submit">submit</button>
