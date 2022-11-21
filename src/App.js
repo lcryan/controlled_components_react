@@ -3,18 +3,29 @@ import './App.css';
 
 function App() {
 
+    const[nameValue, setNameValue] = React.useState('');
+    const[ageValue, setAgeValue] = React.useState('');
+    const[messageValue, setMessageValue] = React.useState('');
+
+
+function handleSubmit(e) {
+    e.preventDefault()
+    console.log()
+}
     return (
 
         <>
             <div>
 
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="name">
                         name:
                         <input
                             type="text"
                             id="user name"
                             name="user name"
+                            value={nameValue}
+                            onChange={(e) => setNameValue(e.target.value)}
                         />
                     </label>
                     <label htmlFor="age">
@@ -43,13 +54,7 @@ function App() {
                                name="subscribe box"
                         />
                     </label>
-                    <label htmlFor="submit-button">
-                        <input
-                            type="submit"
-                            id="submit-button"
-                            name="submit-button"
-                        />
-                    </label>
+                        <button type="submit">submit</button>
                 </form>
 
             </div>
