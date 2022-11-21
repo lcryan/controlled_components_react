@@ -11,7 +11,7 @@ function App() {
 
 function handleSubmit(e) {
     e.preventDefault()
-    console.log(nameValue, ageValue, messageValue)
+    console.log(nameValue, ageValue, messageValue, checkBoxValue)
 }
     return (
 
@@ -58,7 +58,7 @@ function handleSubmit(e) {
                                id="subscribe box"
                                name="subscribe box"
                                checked={checkBoxValue}
-                               onClick={(event) => setCheckBoxValue (!checkBoxValue)}
+                               onChange={(event) => setCheckBoxValue (!checkBoxValue)}
                         />
                     </label>
                         <button type="submit">submit</button>
